@@ -54,7 +54,7 @@ header p {
 
 main {
     margin: 0 auto;
-    width: min(80vw, 500px);
+    /*width: min(80vw, 500px);*/
 
     animation: up 0.4s 0.2s backwards;
 }
@@ -106,7 +106,7 @@ button + button {
 
 img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #photo-file{
@@ -129,6 +129,6 @@ img {
     height: 200px; */
 }
 
-#crop-image{
+#crop-image, #tamanho_imagem{
     display: none;
 }

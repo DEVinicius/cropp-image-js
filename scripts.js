@@ -1,6 +1,7 @@
 const photoFile = document.getElementById('photo-file')
 let photoPreview = document.getElementById("photo-preview")
 let image;
+const tamanhoImagem = document.getElementById('tamanho_imagem')
 
 // Select and Preview
 document.getElementById("select-image").onclick = function(){
@@ -30,6 +31,7 @@ let startSelection = false;
 const events = {
     mouseover(){
         this.style.cursor = 'crosshair'
+        tamanhoImagem.style.display = 'initial'
     },
     mousedown(){
         const {clientX, clientY, offsetX, offsetY} = event
@@ -58,9 +60,32 @@ const events = {
             selection.style.display = 'initial'
             selection.style.top = startY+"px"
             selection.style.left = startX+"px"
-    
-            selection.style.width = "360px"
-            selection.style.height = "360px"
+            
+            if (tamanhoImagem.value == 1){
+                selection.style.width = "330px"
+                selection.style.height = "315px"
+            }
+
+            if (tamanhoImagem.value == 2){
+                selection.style.width = "690px"
+                selection.style.height = "315px"
+            }
+
+            if (tamanhoImagem.value == 3){
+                selection.style.width = "1410px"
+                selection.style.height = "170px"
+            }
+
+            if (tamanhoImagem.value == 4){
+                selection.style.width = "1920px"
+                selection.style.height = "300px"
+            }
+
+            if (tamanhoImagem.value == 5){
+                selection.style.width = "1920px"
+                selection.style.height = "660px"
+            }
+            
         }
 
     },
